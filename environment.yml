@@ -1,0 +1,4 @@
+name: youtube_ad_skip
+dependencies:
+  - python=3.8.5
+  - pip=21.1.3
