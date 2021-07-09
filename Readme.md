@@ -15,6 +15,7 @@ Note:
 To run:
 ```
 conda env create -f environment.yml
+conda activate youtube_ad_skip
 pip install -r requirements.txt
 python click_on_skip_ad.py
 ```

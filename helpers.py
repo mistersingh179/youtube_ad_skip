@@ -27,8 +27,8 @@ def get_template_location(frame, template_images):
   items = []
   for index, template_image in enumerate(template_images):
     h, w, _ = template_image.shape
-    minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(template_match_result)
     template_match_result = cv2.matchTemplate(frame, template_image, cv2.TM_CCOEFF_NORMED)
+    minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(template_match_result)
     items.append((maxVal, maxLoc, (w,h)))
   items.sort(key=lambda item: item[0], reverse=True)
   return items
