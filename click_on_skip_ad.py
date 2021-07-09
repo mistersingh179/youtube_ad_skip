@@ -21,6 +21,9 @@ while True:
   highlight_templates(image_with_annot, template_images)
   image_with_annot = cv2.resize(image_with_annot, (int(1920/3), int(1080/3)))
   cv2.imshow('debug', image_with_annot)
+  if cv2.waitKey(1) == ord('q'):
+    cv2.destroyAllWindows()
+    sys.exit(0)
   locations = get_template_location(screen_image, template_images)
   location = locations[0]
   print(location)
@@ -28,7 +31,5 @@ while True:
   if likelyhood > 0.9:
     print('CLICKING!!!')
     click_at_skip_ad(x,y)
-  if cv2.waitKey(1) == ord('q'):
-    cv2.destroyAllWindows()
-    sys.exit(0)
+
 

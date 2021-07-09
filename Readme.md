@@ -20,6 +20,8 @@ pip install -r requirements.txt
 python click_on_skip_ad.py
 ```
 
+![Clicking on Skip Ad button](skipping_ad_preview.gif)
+
 ![Finding Button Preview](finding_button_preview.gif)
 
 ![Security Setting for Mouse Access](security_settings.jpg)
